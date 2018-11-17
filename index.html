@@ -1,199 +1,89 @@
-
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>PokeOne+ API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
-.highlight .gh {
-  color: #999999;
+.highlight, .highlight .w {
+  color: #f8f8f2;
+  background-color: #272822;
 }
-.highlight .sr {
-  color: #f6aa11;
+.highlight .err {
+  color: #272822;
+  background-color: #f92672;
 }
-.highlight .go {
-  color: #888888;
-}
-.highlight .gp {
-  color: #555555;
-}
-.highlight .gs {
-}
-.highlight .gu {
-  color: #aaaaaa;
-}
-.highlight .nb {
-  color: #f6aa11;
-}
-.highlight .cm {
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
   color: #75715e;
 }
 .highlight .cp {
-  color: #75715e;
-}
-.highlight .c1 {
-  color: #75715e;
-}
-.highlight .cs {
-  color: #75715e;
-}
-.highlight .c, .highlight .cd {
-  color: #75715e;
-}
-.highlight .err {
-  color: #960050;
-}
-.highlight .gr {
-  color: #960050;
-}
-.highlight .gt {
-  color: #960050;
-}
-.highlight .gd {
-  color: #49483e;
-}
-.highlight .gi {
-  color: #49483e;
-}
-.highlight .ge {
-  color: #49483e;
-}
-.highlight .kc {
-  color: #66d9ef;
-}
-.highlight .kd {
-  color: #66d9ef;
-}
-.highlight .kr {
-  color: #66d9ef;
-}
-.highlight .no {
-  color: #66d9ef;
-}
-.highlight .kt {
-  color: #66d9ef;
-}
-.highlight .mf {
-  color: #ae81ff;
-}
-.highlight .mh {
-  color: #ae81ff;
-}
-.highlight .il {
-  color: #ae81ff;
-}
-.highlight .mi {
-  color: #ae81ff;
-}
-.highlight .mo {
-  color: #ae81ff;
-}
-.highlight .m, .highlight .mb, .highlight .mx {
-  color: #ae81ff;
-}
-.highlight .sc {
-  color: #ae81ff;
-}
-.highlight .se {
-  color: #ae81ff;
-}
-.highlight .ss {
-  color: #ae81ff;
-}
-.highlight .sd {
-  color: #e6db74;
-}
-.highlight .s2 {
-  color: #e6db74;
-}
-.highlight .sb {
-  color: #e6db74;
-}
-.highlight .sh {
-  color: #e6db74;
-}
-.highlight .si {
-  color: #e6db74;
-}
-.highlight .sx {
-  color: #e6db74;
-}
-.highlight .s1 {
-  color: #e6db74;
-}
-.highlight .s {
-  color: #e6db74;
-}
-.highlight .na {
-  color: #a6e22e;
-}
-.highlight .nc {
-  color: #a6e22e;
-}
-.highlight .nd {
-  color: #a6e22e;
-}
-.highlight .ne {
-  color: #a6e22e;
-}
-.highlight .nf {
-  color: #a6e22e;
-}
-.highlight .vc {
-  color: #ffffff;
-}
-.highlight .nn {
-  color: #ffffff;
-}
-.highlight .nl {
-  color: #ffffff;
-}
-.highlight .ni {
-  color: #ffffff;
-}
-.highlight .bp {
-  color: #ffffff;
-}
-.highlight .vg {
-  color: #ffffff;
-}
-.highlight .vi {
-  color: #ffffff;
-}
-.highlight .nv {
-  color: #ffffff;
-}
-.highlight .w {
-  color: #ffffff;
-}
-.highlight {
-  color: #ffffff;
-}
-.highlight .n, .highlight .py, .highlight .nx {
-  color: #ffffff;
-}
-.highlight .ow {
-  color: #f92672;
+  color: #f4bf75;
 }
 .highlight .nt {
+  color: #f4bf75;
+}
+.highlight .o, .highlight .ow {
+  color: #f8f8f2;
+}
+.highlight .p, .highlight .pi {
+  color: #f8f8f2;
+}
+.highlight .gi {
+  color: #a6e22e;
+}
+.highlight .gd {
   color: #f92672;
 }
-.highlight .k, .highlight .kv {
-  color: #f92672;
+.highlight .gh {
+  color: #66d9ef;
+  background-color: #272822;
+  font-weight: bold;
 }
-.highlight .kn {
-  color: #f92672;
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #ae81ff;
 }
-.highlight .kp {
-  color: #f92672;
+.highlight .kc {
+  color: #fd971f;
 }
-.highlight .o {
-  color: #f92672;
+.highlight .kt {
+  color: #fd971f;
+}
+.highlight .kd {
+  color: #fd971f;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #a6e22e;
+}
+.highlight .sr {
+  color: #a1efe4;
+}
+.highlight .si {
+  color: #cc6633;
+}
+.highlight .se {
+  color: #cc6633;
+}
+.highlight .nn {
+  color: #f4bf75;
+}
+.highlight .nc {
+  color: #f4bf75;
+}
+.highlight .no {
+  color: #f4bf75;
+}
+.highlight .na {
+  color: #66d9ef;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #a6e22e;
+}
+.highlight .ss {
+  color: #a6e22e;
 }
     </style>
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
@@ -201,52 +91,25 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;lua&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
         <img src="images/navbar.png" alt="Navbar" />
       </span>
     </a>
-    <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+    <div class="tocify-wrapper">
+      <img src="images/logo.png" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="lua">lua</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
         <ul class="search-results"></ul>
-      <ul id="toc" class="toc-list-h1">
-          <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
-          </li>
-      </ul>
+      <div id="toc">
+      </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -254,250 +117,3251 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the API documentation for PokeOne+.</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>This documentation describes the functions available for use in the Lua scripts.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>Please note that functions are case-sensitive in Lua and all the PokeOne+ functions start with a lowercase letter.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Last updated: November 17, 2018</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+          <h1 id='events'>Events</h1><h2 id='onstart'>onStart</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onStart</span><span class="p">()</span>
 </code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<p>Called when the bot is started.</p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<p>This is where you should initialize your variables.</p>
+<h2 id='onstop'>onStop</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onStop</span><span class="p">()</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p>Called when the bot is stopped.</p>
+<h2 id='onupdate'>onUpdate</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onUpdate</span><span class="p">()</span>
+</code></pre>
+<p>Description</p>
+<h2 id='onpause'>onPause</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onPause</span><span class="p">()</span>
+</code></pre>
+<p>Called when the bot is paused.</p>
+<h2 id='onresume'>onResume</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onResume</span><span class="p">()</span>
+</code></pre>
+<p>Called when the bot is resumed from a previous pause.</p>
+<h2 id='onsystemmessage'>onSystemMessage</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onSystemMessage</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre>
+<p>Called when a system message is displayed. These messages are displayed inside the chat in-game.</p>
+<h2 id='onwarningmessage'>onWarningMessage</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onWarningMessage</span><span class="p">(</span><span class="n">isDifferentMap</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span>
+</code></pre>
+<p>Called when something unexpected happened while teleporting to a map or while moving.</p>
+<h2 id='onbattlemessage'>onBattleMessage</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onBattleMessage</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre>
+<p>Called when a battle message is displayed. These messages are displayed inside the battle window in-game.</p>
+<h2 id='ondialogmessage'>onDialogMessage</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onDialogMessage</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre>
+<p>Called when a dialog message is displayed (because you are talking to a NPC, for instance).</p>
+<h2 id='onquestupdated'>onQuestUpdated</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onQuestUpdated</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">questDescription</span><span class="p">)</span>
+</code></pre>
+<p>Description</p>
+<h2 id='onmovementlag'>onMovementLag</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onMovementLag</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+</code></pre>
+<p>Called if lag occurs while moving.</p>
+<h2 id='onpathaction'>onPathAction</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onPathAction</span><span class="p">()</span>
+</code></pre>
+<p>Called when the bot must execute a path action. You should execute one (and only one) game action in this scope.</p>
+<h2 id='onbattleaction'>onBattleAction</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onBattleAction</span><span class="p">()</span>
+</code></pre>
+<p>Called when the bot must execute a batlle action. You should execute one (and only one) battle action in this scope.</p>
+<h2 id='onlearningmove'>onLearningMove</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">onLearningMove</span><span class="p">(</span><span class="n">moveName</span><span class="p">,</span> <span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Called when a pokemon is learning a move but already has four. You can call <code>forgetMove</code> or <code>forgetAnyMoveExcept</code> here. If you do not call these functions, the move will not be learned.</p>
+<h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Type</th>
+<th>Description</th>
+<th>Returns</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>moveName</td>
+<td>string</td>
+<td>Name of the move that can be learned.</td>
+<td></td>
+</tr>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokemon learning the new move. (1-6)</td>
+<td></td>
+</tr>
+</tbody></table>
+
+          <h1 id='general-functions'>General Functions</h1><h2 id='log'>Log</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">log</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre>
+<p>Writes the specified message to the message log.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>message</td>
+<td>string</td>
+<td>Message to display.</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h2 id='fatal'>Fatal</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">fatal</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p>Writes the specified message to the message log and stops the bot.</p>
+<h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>message</td>
+<td>string</td>
+<td>Message to display.</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h2 id='logout'>Logout</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">logout</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p>Displays the specified message to the message log and logs out.</p>
+<h3 id='parameters-3'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>message</td>
+<td>string</td>
+<td>Message to display.</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
+<h2 id='stringcontains'>StringContains</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">stringContains</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">needle</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the haystack contains the specified needle, ignoring the case.</p>
+<h3 id='parameters-4'>Parameters</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>haystack</td>
+<td>string</td>
+<td>String to analyze.</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>needle</td>
+<td>string</td>
+<td>String to search in the haystack.</td>
+</tr>
+</tbody></table>
+<h2 id='playsound'>PlaySound</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">playSound</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</code></pre>
+<p>Returns playing a custom sound.</p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>file</td>
+<td>string</td>
+<td>Sound file to play.</td>
+</tr>
+</tbody></table>
+<h2 id='registerhook'>RegisterHook</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">registerHook</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+</code></pre>
+<p>Calls the specified function when the specified event occurs.</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>eventName</td>
+<td>string</td>
+<td>Event that triggers the specified callback function.</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>callback</td>
+<td>function</td>
+<td>Function to call when the specified event occurs.</td>
+</tr>
+</tbody></table>
+
+          <h1 id='game-conditions'>Game Conditions</h1><h2 id='getplayerx'>GetPlayerX</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPlayerX</span><span class="p">()</span>
+</code></pre>
+<p>Returns the X-coordinate of the current cell.</p>
+<h2 id='getplayery'>GetPlayerY</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPlayerY</span><span class="p">()</span>
+</code></pre>
+<p>Returns the Y-coordinate of the current cell.</p>
+<h2 id='getplayerlevel'>GetPlayerLevel</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPlayerLevel</span><span class="p">()</span>
+</code></pre>
+<p>Returns players current level of current region.</p>
+<h2 id='getaccountname'>GetAccountName</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getAccountName</span><span class="p">()</span>
+</code></pre>
+<p>Returns current account name.</p>
+<h2 id='getareaname'>GetAreaName</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getAreaName</span><span class="p">()</span>
+</code></pre>
+<p>Returns the name of the current area.</p>
+<h2 id='getmapname'>GetMapName</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getMapName</span><span class="p">()</span>   
+</code></pre>
+<p>Returns the name of the current map.</p>
+<h2 id='getdestinationid'>GetDestinationId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getDestinationId</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</code></pre>
+<p>Gets destination id of a specified link in Guid format.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>X</td>
+<td>number</td>
+<td>X coordinate of the cell.</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Y</td>
+<td>number</td>
+<td>Y coordinate of the cell.</td>
+</tr>
+</tbody></table>
+<h2 id='getnearestmovablecell'>GetNearestMovableCell</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getNearestMovableCell</span><span class="p">(</span><span class="n">minX</span><span class="p">,</span> <span class="n">minY</span><span class="p">,</span> <span class="n">maxX</span><span class="p">,</span> <span class="n">maxY</span><span class="p">)</span>
+</code></pre>
+<p>Gets the nearest moveable cell from specified rectangle cells.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>minX</td>
+<td>number</td>
+<td>Minimum X coordinate of the rectangle.</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>minY</td>
+<td>number</td>
+<td>Minimum Y coordinate of the rectangle.</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>maxX</td>
+<td>number</td>
+<td>Maximum X coordinate of the rectangle.</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>maxY</td>
+<td>number</td>
+<td>Maximum Y coordinate of the rectangle.</td>
+</tr>
+</tbody></table>
+<h2 id='getteamsize'>GetTeamSize</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getTeamSize</span><span class="p">()</span>
+</code></pre>
+<p>Returns the amount of pokémon in the team.</p>
+<h2 id='getpokedexowned'>GetPokedexOwned</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokedexOwned</span><span class="p">()</span>
+</code></pre>
+<p>Returns the amount of pokémon owned in the pokédex.</p>
+<h2 id='getpokedexseen'>GetPokedexSeen</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokedexSeen</span><span class="p">()</span>
+</code></pre>
+<p>Returns the amount of pokémon seen in the pokédex.</p>
+<h2 id='gettotalsteps'>GetTotalSteps</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getTotalSteps</span><span class="p">()</span>
+</code></pre>
+<p>Returns total steps taken by the account.</p>
+<h2 id='hasitem'>HasItem</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">hasItem</span><span class="p">(</span><span class="n">itemName</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the specified item is in the inventory.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>itemName</td>
+<td>string</td>
+<td>Name of the item (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getitemquantity'>GetItemQuantity</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getItemQuantity</span><span class="p">(</span><span class="n">itemName</span><span class="p">)</span>
+</code></pre>
+<p>Returns the quantity of the specified item in the inventory.</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>itemName</td>
+<td>string</td>
+<td>Name of the item (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getitemid'>GetItemId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getItemId</span><span class="p">(</span><span class="n">itemName</span><span class="p">)</span>
+</code></pre>
+<p>Returns the ID of the specified item in the inventory.</p>
+<h2 id='hasitemid'>HasItemId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">hasItemId</span><span class="p">(</span><span class="n">itemId</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the specified item is in the inventory.</p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>itemId</td>
+<td>string</td>
+<td>ID of the item.</td>
+</tr>
+</tbody></table>
+<h2 id='getitemquantityid'>GetItemQuantityID</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getItemQuantityId</span><span class="p">(</span><span class="n">itemId</span><span class="p">)</span>
+</code></pre>
+<p>Returns the quantity of the specified item in the inventory.</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>itemId</td>
+<td>string</td>
+<td>ID of the item.</td>
+</tr>
+</tbody></table>
+<h2 id='haspokemoninteam'>HasPokemonInTeam</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">hasPokemonInTeam</span><span class="p">(</span><span class="n">pokemonName</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the specified pokémon is present in the team.</p>
+<h3 id='parameters-7'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonName</td>
+<td>string</td>
+<td>Name of the pokémon (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='isteamsortedbylevelascending'>IsTeamSortedByLevelAscending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isTeamSortedByLevelAscending</span><span class="p">()</span> 
+</code></pre>
+<p>Returns true if the team is sorted by level in ascending order.</p>
+<h2 id='isteamsortedbyleveldescending'>IsTeamSortedByLevelDescending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isTeamSortedByLevelDescending</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the team is sorted by level in descending order.</p>
+<h2 id='isteamrangesortedbylevelascending'>IsTeamRangeSortedByLevelAscending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isTeamRangeSortedByLevelAscending</span><span class="p">(</span><span class="n">fromIndex</span><span class="p">,</span> <span class="n">toIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the specified part of the team is sorted by level in ascending order.</p>
+<h3 id='parameters-8'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>fromIndex</td>
+<td>number</td>
+<td>Lower index of the range (1-5).</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<td>toIndex</td>
+<td>number</td>
+<td>Upper index of the range (2-6).</td>
+</tr>
+</tbody></table>
+<h2 id='isteamrangesortedbyleveldescending'>IsTeamRangeSortedByLevelDescending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isTeamRangeSortedByLevelDescending</span><span class="p">(</span><span class="n">fromIndex</span><span class="p">,</span> <span class="n">toIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the specified part of the team the team is sorted by level in descending order.</p>
+<h3 id='parameters-9'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>fromIndex</td>
+<td>number</td>
+<td>Lower index of the range (1-5).</td>
 </tr>
 <tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>toIndex</td>
+<td>number</td>
+<td>Upper index of the range (2-6).</td>
+</tr>
+</tbody></table>
+<h2 id='isnpcvisible'>IsNpcVisible</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isNpcVisible</span><span class="p">(</span><span class="n">npcName</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if there is a visible NPC with the specified name on the map.</p>
+<h3 id='parameters-10'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>npcName</td>
+<td>string</td>
+<td>Name of the NPC (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='isnpconcell'>IsNpcOnCell</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isNpcOnCell</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if there is a visible NPC the specified coordinates.</p>
+<h3 id='parameters-11'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>X</td>
+<td>number</td>
+<td>X coordinate of the cell.</td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>Y</td>
+<td>number</td>
+<td>Y coordinate of the cell.</td>
+</tr>
+</tbody></table>
+<h2 id='isshopopen'>IsShopOpen</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isShopOpen</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the shop window is open.</p>
+<h2 id='getmoney'>GetMoney</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getMoney</span><span class="p">()</span>
+</code></pre>
+<p>Returns the amount of money in the inventory.</p>
+<h2 id='ismounted'>IsMounted</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isMounted</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the player is riding a mount or the bicycle.</p>
+<h2 id='issurfing'>IsSurfing</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isSurfing</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the player is surfing.</p>
+<h2 id='gettime'>GetTime</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getTime</span><span class="p">()</span>
+</code></pre>
+<p>Returns the current in game hour and minute.</p>
+<h2 id='ismorning'>IsMorning</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isMorning</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if morning time.</p>
+<h2 id='isnoon'>IsNoon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isNoon</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if noon time.</p>
+<h2 id='isevening'>isEvening</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">IsEvening</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if evening time.</p>
+<h2 id='isnight'>IsNight</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isNight</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if night time.</p>
+<h2 id='isoutside'>IsOutside</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isOutside</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the character is outside.</p>
+<h2 id='istrainerinforeceived'>IsTrainerInfoReceived</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isTrainerInfoReceived</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if trainer info has been received.</p>
+<h2 id='askfortrainerinfo'>AskForTrainerInfo</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">askForTrainerInfo</span><span class="p">()</span>
+</code></pre>
+<p>Asks for trainer info.</p>
+<h2 id='gettrainerkantolevel'>GetTrainerKantoLevel</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getTrainerKantoLevel</span><span class="p">()</span>
+</code></pre>
+<p>Retruns players Kanto level.</p>
+<h2 id='gettrainerjohtolevel'>GetTrainerJohtoLevel</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getTrainerJohtoLevel</span><span class="p">()</span>
+</code></pre>
+<p>Returns players Johto level.</p>
+<h2 id='hasbadge'>HasBadge</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">hasBadge</span><span class="p">(</span><span class="n">badgeName</span><span class="p">)</span>
+</code></pre>
+<p>Retruns true if player has specified badge.</p>
+<h3 id='parameters-12'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>badgeName</td>
+<td>string</td>
+<td>Name of the badge.</td>
+</tr>
+</tbody></table>
+<h2 id='hasbadgeid'>HasBadgeId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">hasBadgeId</span><span class="p">(</span><span class="n">badgeId</span><span class="p">)</span>
+</code></pre>
+<p>Retruns true if player has specified badge Id.</p>
+<h3 id='parameters-13'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>badgeId</td>
+<td>number</td>
+<td>Id of the badge.</td>
+</tr>
+</tbody></table>
+<h2 id='countbadges'>CountBadges</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">countBadges</span><span class="p">()</span>
+</code></pre>
+<p>Counts players currently owned badges.</p>
+<h2 id='useequippedmount'>UseEquippedMount</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">useEquippedMount</span><span class="p">()</span>
+</code></pre>
+<p>Uses the currently equipped mount.</p>
+
+          <h1 id='pokemon-conditions'>Pokemon Conditions</h1><h2 id='getpokemonid'>GetPokemonId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonId</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the ID of the specified pokémon in the team.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonname'>GetPokemonName</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonName</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the name of the specified pokémon in the team.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonhealth'>GetPokemonHealth</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonHealth</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the current health of the specified pokémon in the team.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonhealthpercent'>GetPokemonHealthPercent</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonHealthPercent</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the percentage of remaining health of the specified pokémon in the team.</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmaxhealth'>GetPokemonMaxHealth</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMaxHealth</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the maximum health of the specified pokémon in the team.</p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='ispokemonshiny'>IsPokemonShiny</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isPokemonShiny</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the shinyness of the specified pokémon in the team.</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovename'>GetPokemonMoveName</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveName</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">moveIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move of the specified pokémon in the team at the specified index.</p>
+<h3 id='parameters-7'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>moveIndex</td>
+<td>number</td>
+<td>Index of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmoveaccuracy'>GetPokemonMoveAccuracy</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveAccuracy</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">moveIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move accuracy of the specified pokémon in the team at the specified index.</p>
+<h3 id='parameters-8'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>moveIndex</td>
+<td>number</td>
+<td>Index of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovepower'>GetPokemonMovePower</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMovePower</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">moveIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move power of the specified pokémon in the team at the specified index.    </p>
+<h3 id='parameters-9'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>moveIndex</td>
+<td>number</td>
+<td>Index of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovetype'>GetPokemonMoveType</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveType</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">moveIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move type of the specified pokémon in the team at the specified index.</p>
+<h3 id='parameters-10'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>moveIndex</td>
+<td>number</td>
+<td>Index of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovedamagetype'>GetPokemonMoveDamageType</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveDamageType</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">moveIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move damage type of the specified pokémon in the team at the specified index.</p>
+<h3 id='parameters-11'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>moveIndex</td>
+<td>number</td>
+<td>Index of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovestatus'>GetPokemonMoveStatus</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveStatus</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">moveIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the move of the specified pokémon in the team at the specified index can apply a status.</p>
+<h3 id='parameters-12'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>moveIndex</td>
+<td>number</td>
+<td>Index of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmaxpowerpoints'>GetPokemonMaxPowerPoints</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMaxPowerPoints</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">moveIndex</span><span class="p">)</span>
+</code></pre>
+<p>Max move PP of the pokémon of the current box matching the ID.</p>
+<h3 id='parameters-13'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>moveIndex</td>
+<td>number</td>
+<td>Index of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonnature'>GetPokemonNature</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonNature</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Nature of the pokémon of the current box matching the ID.</p>
+<h3 id='parameters-14'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonability'>GetPokemonAbility</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonAbility</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Ability of the pokémon of the current box matching the ID.</p>
+<h3 id='parameters-15'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonlevel'>GetPokemonLevel</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonLevel</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the level of the specified pokémon in the team.</p>
+<h3 id='parameters-16'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonhappiness'>GetPokemonHappiness</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonHappiness</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the happiness of the specified pokémon in the team.</p>
+<h3 id='parameters-17'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonoriginaltrainer'>GetPokemonOriginalTrainer</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonOriginalTrainer</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the original trainer of the specified pokémon in the team.</p>
+<h3 id='parameters-18'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemongender'>GetPokemonGender</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonGender</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the gender of the specified pokémon in the team.</p>
+<h3 id='parameters-19'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemontype'>GetPokemonType</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonType</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the type of the specified pokémon in the team as a table of length 2.</p>
+<h3 id='parameters-20'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getdamagemultiplier'>GetDamageMultiplier</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getDamageMultiplier</span><span class="p">(</span><span class="n">attacker</span><span class="p">,</span> <span class="n">defender</span><span class="p">)</span>
+</code></pre>
+<p>Returns the multiplier of the damage type between an attacking type and one or two defending types.</p>
+<h3 id='parameters-21'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>attacker</td>
+<td>string</td>
+<td>Type of the attacking move.</td>
+</tr>
+<tr>
+<td>defender</td>
+<td>string</td>
+<td>Type(s) of the defending pokémon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonstatus'>GetPokemonStatus</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonStatus</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the status of the specified pokémon in the team.</p>
+<h3 id='parameters-22'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonforme'>GetPokemonForme</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonForme</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the forme of the specified pokémon in the team.</p>
+<h3 id='parameters-23'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonhelditem'>GetPokemonHeldItem</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonHeldItem</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns the item held by the specified pokémon in the team, null if empty.</p>
+<h3 id='parameters-24'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='ispokemonusable'>IsPokemonUsable</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isPokemonUsable</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the specified pokémon is alive and has an offensive attack available.</p>
+<h3 id='parameters-25'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='getusablepokemoncount'>GetUsablePokemonCount</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getUsablePokemonCount</span><span class="p">()</span>
+</code></pre>
+<p>Returns the amount of usable pokémon in the team.  </p>
+<h2 id='hasmove'>HasMove</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">hasMove</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">moveName</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the specified pokémon has a move with the specified name.</p>
+<h3 id='parameters-26'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>moveName</td>
+<td>string</td>
+<td>Name of the move (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getremainingpowerpoints'>GetRemainingPowerPoints</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getRemainingPowerPoints</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">moveName</span><span class="p">)</span>
+</code></pre>
+<p>Returns the remaining power points of the specified move of the specified pokémon in the team.</p>
+<h3 id='parameters-27'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>moveName</td>
+<td>string</td>
+<td>Name of the move (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonstat'>GetPokemonStat</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonStat</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">statName</span><span class="p">)</span>
+</code></pre>
+<p>Returns the value for the specified stat of the specified pokémon in the team. Stat names are:</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-28'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>statName</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemoneffortvalue'>GetPokemonEffortValue</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonEffortValue</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">statName</span><span class="p">)</span>
+</code></pre>
+<p>Returns the value for the specified stat of the specified pokémon in the team. Stat names are:</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-29'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>statName</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonindividualvalue'>GetPokemonIndividualValue</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonIndividualValue</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">statName</span><span class="p">)</span>
+</code></pre>
+<p>Returns the value for the specified stat of the specified pokémon in the team. Stat names are:</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-30'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>statName</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+</tbody></table>
+
+          <h1 id='battle-conditions'>Battle Conditions</h1><h2 id='isopponentshiny'>IsOpponentShiny</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isOpponentShiny</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the opponent pokémon is shiny.</p>
+<h2 id='isalreadycaught'>IsAlreadyCaught</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isAlreadyCaught</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the opponent pokémon has already been caught and has a pokedex entry.</p>
+<h2 id='iswildbattle'>IsWildBattle</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isWildBattle</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the current battle is against a wild pokémon.</p>
+<h2 id='isdoublebattle'>IsDoubleBattle</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isDoubleBattle</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the current battle is a double battle.</p>
+<h2 id='getactivepokemonnumber'>GetActivePokemonNumber</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getActivePokemonNumber</span><span class="p">()</span>
+</code></pre>
+<p>Returns the index of the active team pokémon in the current battle.</p>
+<h2 id='getteampositionfrompersonality'>GetTeamPositionFromPersonality</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getTeamPositionFromPersonality</span><span class="p">(</span><span class="n">integer</span><span class="p">)</span>
+</code></pre>
+<p>Description.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>integer</td>
+<td>number</td>
+<td>Description.</td>
+</tr>
+</tbody></table>
+<h2 id='getactivepokemons'>GetActivePokemons</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getActivePokemons</span><span class="p">()</span>
+</code></pre>
+<p>Returns all active pokemons during double/triple battle, format : { { &quot;Name&quot; = name, &quot;Id&quot; = id, &quot;Form&quot; = form }, {...}, ... }</p>
+<h2 id='getopponentid'>GetOpponentId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentId</span><span class="p">()</span>
+</code></pre>
+<p>Returns the id of the opponent pokémon in the current battle.</p>
+<h2 id='getopponentname'>GetOpponentName</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentName</span><span class="p">()</span>
+</code></pre>
+<p>Returns the name of the opponent pokémon in the current battle.</p>
+<h2 id='getopponenthealth'>GetOpponentHealth</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentHealth</span><span class="p">()</span>
+</code></pre>
+<p>Returns the current health of the opponent pokémon in the current battle.</p>
+<h2 id='getopponentmaxhealth'>GetOpponentMaxHealth</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentMaxHealth</span><span class="p">()</span>
+</code></pre>
+<p>Returns the max health of the opponent pokémon in the current battle.  </p>
+<h2 id='getopponenthealthpercent'>GetOpponentHealthPercent</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentHealthPercent</span><span class="p">()</span>
+</code></pre>
+<p>Returns the percentage of remaining health of the opponent pokémon in the current battle.</p>
+<h2 id='getopponentlevel'>GetOpponentLevel</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentLevel</span><span class="p">()</span>
+</code></pre>
+<p>Returns the level of the opponent pokémon in the current battle.</p>
+<h2 id='getopponentstatus'>GetOpponentStatus</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentStatus</span><span class="p">()</span>
+</code></pre>
+<p>Returns the status of the opponent pokémon in the current battle.</p>
+<h2 id='getopponentforme'>GetOpponentForme</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentForme</span><span class="p">()</span>
+</code></pre>
+<p>Returns the forme of the opponent pokémon in the current battle.</p>
+<h2 id='isopponenteffortvalue'>IsOpponentEffortValue</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isOpponentEffortValue</span><span class="p">(</span><span class="n">statName</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the opponent is only giving the specified effort value. Stat names are:</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>statName</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getopponenteffortvalue'>GetOpponentEffortValue</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentEffortValue</span><span class="p">(</span><span class="n">statName</span><span class="p">)</span>
+</code></pre>
+<p>Returns the amount of a particular EV given by the opponent. Stat names are:</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>statName</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getopponenttype'>GetOpponentType</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getOpponentType</span><span class="p">()</span>
+</code></pre>
+<p>Returns the type of the opponent pokémon in the current battle as an array of length 2.</p>
+
+          <h1 id='pc-conditions'>PC Conditions</h1><h2 id='ispcopen'>IsPCOpen</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isPCOpen</span><span class="p">()</span>
+</code></pre>
+<p>Check if the PC is open. Moving close the PC, usePC() opens it.</p>
+<h2 id='iscurrentpcboxrefreshed'>IsCurrentPCBoxRefreshed</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">releasePokemonFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">pokemonUid</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the currentPCBox is refreshed.</p>
+<h2 id='getcurrentpcboxid'>GetCurrentPCBoxId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getCurrentPCBoxId</span><span class="p">()</span>
+</code></pre>
+<p>Returns the active PC Box Id.</p>
+<h2 id='getcurrentpcboxsize'>GetCurrentPCBoxSize</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getCurrentPCBoxSize</span><span class="p">()</span>
+</code></pre>
+<p>Returns the current box size.</p>
+<h2 id='getpcboxcount'>GetPCBoxCount</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPCBoxCount</span><span class="p">()</span>
+</code></pre>
+<p>Return the number of non-empty boxes in the PC.</p>
+<h2 id='getcurrentboxpokemoncount'>GetCurrentBoxPokemonCount</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getCurrentBoxPokemonCount</span><span class="p">()</span>
+</code></pre>
+<p>Return the number of pokemon in the current box.</p>
+<h2 id='getpcpokemoncount'>GetPCPokemonCount</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPCPokemonCount</span><span class="p">()</span>
+</code></pre>
+<p>Return the number of pokemon in the PC.</p>
+<h2 id='getpokemonidfrompc'>GetPokemonIdFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonIdFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Pokedex ID of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonnamefrompc'>GetPokemonNameFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonNameFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Name of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonhealthfrompc'>GetPokemonHealthFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonHealthFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Current HP of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonhealthpercentfrompc'>GetPokemonHealthPercentFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonHealthPercentFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Returns the percentage of remaining health of the specified pokémon in the team.</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmaxhealthfrompc'>GetPokemonMaxHealthFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMaxHealthFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Max HP of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonlevelfrompc'>GetPokemonLevelFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonLevelFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Level of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemontotalexperiencefrompc'>GetPokemonTotalExperienceFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonTotalExperienceFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Total of experience cost of a level for the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-7'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonremainingexperiencefrompc'>GetPokemonRemainingExperienceFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonRemainingExperienceFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Remaining experience before the next level of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-8'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonstatusfrompc'>GetPokemonStatusFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">Remaining</span> <span class="n">experience</span> <span class="n">before</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">level</span> <span class="n">of</span> <span class="n">the</span> <span class="n">pokemon</span> <span class="n">of</span> <span class="n">the</span> <span class="n">current</span> <span class="n">box</span> <span class="n">matching</span> <span class="n">the</span> <span class="n">ID</span><span class="p">.</span>
+</code></pre>
+<p>Status of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-9'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemontypefrompc'>GetPokemonTypeFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonTypeFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Type of the pokemon of the current box matching the ID as a table of length 2.</p>
+<h3 id='parameters-10'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonhelditemfrompc'>GetPokemonHeldItemFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonHeldItemFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Returns the item held by the specified pokemon in the PC, null if empty.</p>
+<h3 id='parameters-11'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonremainingpowerpointsfrompc'>GetPokemonRemainingPowerPointsFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonRemainingPowerPointsFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">moveId</span><span class="p">)</span>
+</code></pre>
+<p>Current move PP of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-12'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>moveId</td>
+<td>number</td>
+<td>ID of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmaxpowerpointsfrompc'>GetPokemonMaxPowerPointsFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMaxPowerPointsFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">moveId</span><span class="p">)</span>
+</code></pre>
+<p>Max move PP of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-13'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>moveId</td>
+<td>number</td>
+<td>ID of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='ispokemonfrompcshiny'>IsPokemonFromPCShiny</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isPokemonFromPCShiny</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Shinyness of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-14'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovenamefrompc'>GetPokemonMoveNameFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveNameFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">moveId</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move name of the move index of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-15'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>moveId</td>
+<td>number</td>
+<td>ID of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmoveaccuracyfrompc'>GetPokemonMoveAccuracyFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveAccuracyFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">moveId</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move accuracy of the specified pokémon in the box at the specified index.</p>
+<h3 id='parameters-16'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>moveId</td>
+<td>number</td>
+<td>ID of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovepowerfrompc'>GetPokemonMovePowerFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMovePowerFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">moveId</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move power of the specified pokémon in the box at the specified index.</p>
+<h3 id='parameters-17'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>moveId</td>
+<td>number</td>
+<td>ID of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovetypefrompc'>GetPokemonMoveTypeFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveTypeFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">moveId</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move type of the specified pokémon in the box at the specified index.</p>
+<h3 id='parameters-18'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>moveId</td>
+<td>number</td>
+<td>ID of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovedamagetypefrompc'>GetPokemonMoveDamageTypeFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveDamageTypeFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">moveId</span><span class="p">)</span>
+</code></pre>
+<p>Returns the move damage type of the specified pokémon in the box at the specified index.</p>
+<h3 id='parameters-19'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>moveId</td>
+<td>number</td>
+<td>ID of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonmovestatusfrompc'>GetPokemonMoveStatusFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonMoveStatusFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">moveId</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the move of the specified pokémon in the box at the specified index can apply a status.</p>
+<h3 id='parameters-20'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>moveId</td>
+<td>number</td>
+<td>ID of the move (1-4).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonnaturefrompc'>GetPokemonNatureFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonNatureFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Nature of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-21'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonabilityfrompc'>GetPokemonAbilityFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonAbilityFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Ability of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-22'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonstatfrompc'>GetPokemonStatFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonStatFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">statType</span><span class="p">)</span>
+</code></pre>
+<p>Returns the value for the specified stat of the specified pokémon in the PC.</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-23'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>statType</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemoneffortvaluefrompc'>GetPokemonEffortValueFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonEffortValueFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">statType</span><span class="p">)</span>
+</code></pre>
+<p>Returns the effort value for the specified stat of the specified pokémon in the PC.</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-24'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>statType</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonindividualvaluefrompc'>GetPokemonIndividualValueFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonIndividualValueFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">statType</span><span class="p">)</span>
+</code></pre>
+<p>Returns the individual value for the specified stat of the specified pokémon in the PC.</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-25'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+<tr>
+<td>statType</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonhappinessfrompc'>GetPokemonHappinessFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonHappinessFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Happiness of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-26'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemonoriginaltrainerfrompc'>GetPokemonOriginalTrainerFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonOriginalTrainerFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Original trainer of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-27'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='getpokemongenderfrompc'>GetPokemonGenderFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonGenderFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Gender of the pokemon of the current box matching the ID.</p>
+<h3 id='parameters-28'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+
+          <h1 id='quest-conditions'>Quest Conditions</h1><h2 id='ismainquest'>IsMainQuest</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isMainQuest</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the given questName is the name of Main Quest or Story Quest.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='ismainquestid'>IsMainQuestId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isMainQuestId</span><span class="p">(</span><span class="n">questId</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the given Id is the Id of Main Quest or Story Quest.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questId</td>
+<td>string</td>
+<td>ID of the quest in Guid format.</td>
+</tr>
+</tbody></table>
+<h2 id='isquestcompleted'>IsQuestCompleted</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isQuestCompleted</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the given questName is a completed Quest.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='isquestidcompleted'>IsQuestIdCompleted</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isQuestIdCompleted</span><span class="p">(</span><span class="n">questId</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the given Id is a completed Quest.</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questId</td>
+<td>string</td>
+<td>ID of the quest in Guid format.</td>
+</tr>
+</tbody></table>
+<h2 id='isquestpathrequested'>IsQuestPathRequested</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isQuestPathRequested</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the path has been requested of the given questName.</p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='isquestidpathrequested'>IsQuestIdPathRequested</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isQuestIdPathRequested</span><span class="p">(</span><span class="n">questId</span><span class="p">)</span>
+</code></pre>
+<p>Returns true if the path has been requested of the given questId.</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questId</td>
+<td>string</td>
+<td>ID of the quest in Guid format.</td>
+</tr>
+</tbody></table>
+<h2 id='getquestid'>GetQuestId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestId</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Returns the ID of the given questName in Guid format.</p>
+<h3 id='parameters-7'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='getquesttype'>GetQuestType</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestType</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Returns quest type from name as string.</p>
+<h3 id='parameters-8'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='getquestidtype'>GetQuestIdType</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestIdType</span><span class="p">(</span><span class="n">questId</span><span class="p">)</span>
+</code></pre>
+<p>Returns quest type from id as string.</p>
+<h3 id='parameters-9'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questId</td>
+<td>string</td>
+<td>ID of the quest in Guid format.</td>
+</tr>
+</tbody></table>
+<h2 id='getquesttargetarea'>GetQuestTargetArea</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestTargetArea</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Returns target area of a spcefied quest name.</p>
+<h3 id='parameters-10'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='getquestidtargetarea'>GetQuestIdTargetArea</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestIdTargetArea</span><span class="p">(</span><span class="n">questId</span><span class="p">)</span>
+</code></pre>
+<p>Returns target completed area of a spcefied quest name.</p>
+<h3 id='parameters-11'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questId</td>
+<td>string</td>
+<td>ID of the quest in Guid format.</td>
+</tr>
+</tbody></table>
+<h2 id='getquesttargetcompletedarea'>GetQuestTargetCompletedArea</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestTargetCompletedArea</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Returns target completed area of a spcefied quest name.</p>
+<h3 id='parameters-12'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='getquestidtargetcompletedarea'>GetQuestIdTargetCompletedArea</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestIdTargetCompletedArea</span><span class="p">(</span><span class="n">questId</span><span class="p">)</span>
+</code></pre>
+<p>Returns target completed area of a spcefied quest id.</p>
+<h3 id='parameters-13'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questId</td>
+<td>string</td>
+<td>ID of the quest in Guid format.</td>
+</tr>
+</tbody></table>
+<h2 id='getquestsourcenpc'>GetQuestSourceNpc</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestSourceNpc</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Returns source npc name of a spcefied quest name.</p>
+<h3 id='parameters-14'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='getquestidsourcenpc'>GetQuestIdSourceNpc</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestIdSourceNpc</span><span class="p">(</span><span class="n">questId</span><span class="p">)</span>
+</code></pre>
+<p>Returns source npc name of a spcefied quest id.</p>
+<h3 id='parameters-15'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questId</td>
+<td>string</td>
+<td>ID of the quest in Guid format.</td>
+</tr>
+</tbody></table>
+<h2 id='getquestsourcearea'>GetQuestSourceArea</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestSourceArea</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Returns source area of a spcefied quest name.</p>
+<h3 id='parameters-16'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='getquestidsourcearea'>GetQuestIdSourceArea</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getQuestIdSourceArea</span><span class="p">(</span><span class="n">questId</span><span class="p">)</span>
+</code></pre>
+<p>Returns source area of a spcefied quest id.</p>
+<h3 id='parameters-17'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questId</td>
+<td>string</td>
+<td>ID of the quest in Guid format.</td>
+</tr>
+</tbody></table>
+<h2 id='getmainquestname'>GetMainQuestName</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getMainQuestName</span><span class="p">()</span>
+</code></pre>
+<p>Returns the main quest&#39;s name.</p>
+<h2 id='getmainquestid'>GetMainQuestId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getMainQuestId</span><span class="p">()</span>
+</code></pre>
+<p>Returns the main quest&#39;s Id.</p>
+
+          <h1 id='game-actions'>Game Actions</h1><h2 id='movetocell'>MoveToCell</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveToCell</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</code></pre>
+<p>Moves to the specified coordinates.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>X</td>
+<td>number</td>
+<td>X coordinate of the cell.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>number</td>
+<td>Y coordinate of the cell.</td>
+</tr>
+</tbody></table>
+<h2 id='movetoarea'>MoveToArea</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveToArea</span><span class="p">(</span><span class="n">areaName</span><span class="p">)</span>
+</code></pre>
+<p>Moves to the nearest cell teleporting to the specified area.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>areaName</td>
+<td>string</td>
+<td>Name of the destination area (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='movetolink'>MoveToLink</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveToLink</span><span class="p">(</span><span class="n">linkId</span><span class="p">)</span>
+</code></pre>
+<p>Moves to the specified link. You can use getDestinationId() to get link Id&#39;s.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>linkId</td>
+<td>string</td>
+<td>ID of the link in Guid format.</td>
+</tr>
+</tbody></table>
+<h2 id='movetonearestlink'>MoveToNearestLink</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveToNearestLink</span><span class="p">()</span>
+</code></pre>
+<p>Moves to nearest accessible link from player.</p>
+<h2 id='movetorectangle'>MoveToRectangle</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveToRectangle</span><span class="p">(</span><span class="n">minX</span><span class="p">,</span> <span class="n">minY</span><span class="p">,</span> <span class="n">maxX</span><span class="p">,</span> <span class="n">maxY</span><span class="p">)</span>
+</code></pre>
+<p>Moves to a random accessible cell inside the specified rectangle.</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>minX</td>
+<td>number</td>
+<td>Minimum X coordinate of the rectangle.</td>
+</tr>
+<tr>
+<td>minY</td>
+<td>number</td>
+<td>Minimum Y coordinate of the rectangle.</td>
+</tr>
+<tr>
+<td>maxX</td>
+<td>number</td>
+<td>Maximum X coordinate of the rectangle.</td>
+</tr>
+<tr>
+<td>maxY</td>
+<td>number</td>
+<td>Maximum Y coordinate of the rectangle.</td>
+</tr>
+</tbody></table>
+<h2 id='movelinearx'>MoveLinearX</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveLinearX</span><span class="p">(</span><span class="n">minX</span><span class="p">,</span> <span class="n">maxX</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</code></pre>
+<p>Moves side to side in a horizontal line.</p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>minX</td>
+<td>number</td>
+<td>Minimum X coordinate of the line.</td>
+</tr>
+<tr>
+<td>maxX</td>
+<td>number</td>
+<td>Maximum X coordinate of the line.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>number</td>
+<td>Y coordinate of the line.</td>
+</tr>
+</tbody></table>
+<h2 id='movelineary'>MoveLinearY</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveLinearY</span><span class="p">(</span><span class="n">minY</span><span class="p">,</span> <span class="n">maxY</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
+</code></pre>
+<p>Moves up and down in a vertical line.</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>minY</td>
+<td>number</td>
+<td>Minimum Y coordinate of the line.</td>
+</tr>
+<tr>
+<td>maxY</td>
+<td>number</td>
+<td>Maximum Y coordinate of the line.</td>
+</tr>
+<tr>
+<td>X</td>
+<td>number</td>
+<td>X coordinate of the line.</td>
+</tr>
+</tbody></table>
+<h2 id='movetograss'>MoveToGrass</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveToGrass</span><span class="p">()</span>
+</code></pre>
+<p>Moves to the nearest grass patch then moves randomly inside it.</p>
+<h2 id='movetowater'>MoveToWater</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveToWater</span><span class="p">()</span>
+</code></pre>
+<p>Moves to the nearest water area then moves randomly inside it.</p>
+<h2 id='useequippedmount'>UseEquippedMount</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">useEquippedMount</span><span class="p">()</span>
+</code></pre>
+<p>Uses the currently equipped mount.</p>
+<h2 id='talktonpc'>TalkToNpc</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">talkToNpc</span><span class="p">(</span><span class="n">npcName</span><span class="p">)</span>
+</code></pre>
+<p>Moves then talks to NPC specified by its name.</p>
+<h3 id='parameters-7'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>npcName</td>
+<td>string</td>
+<td>Name of the NPC (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='talktonpconcell'>TalkToNpcOnCell</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">talkToNpcOnCell</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</code></pre>
+<p>Moves then talks to NPC located on the specified cell.</p>
+<h3 id='parameters-8'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>X</td>
+<td>number</td>
+<td>X coordinate of the cell.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>number</td>
+<td>Y coordinate of the cell.</td>
+</tr>
+</tbody></table>
+<h2 id='usepokecenter'>UsePokecenter</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">usePokecenter</span><span class="p">()</span>
+</code></pre>
+<p>Moves to the Nurse Joy then talks to the cell below her.</p>
+<h2 id='swappokemon'>SwapPokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">swapPokemon</span><span class="p">(</span><span class="n">pokemonIndex1</span><span class="p">,</span> <span class="n">pokemonIndex2</span><span class="p">)</span>
+</code></pre>
+<p>Swaps the two pokémon specified by their position in the team.</p>
+<h3 id='parameters-9'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex1</td>
+<td>number</td>
+<td>Index of the first pokémon to swap.</td>
+</tr>
+<tr>
+<td>pokemonIndex2</td>
+<td>number</td>
+<td>Index of the second pokémon to swap.</td>
+</tr>
+</tbody></table>
+<h2 id='sortteambylevelascending'>SortTeamByLevelAscending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sortTeamByLevelAscending</span><span class="p">()</span>
+</code></pre>
+<p>Sorts the pokémon in the team by level in ascending order, one pokémon at a time.</p>
+<h2 id='sortteambyleveldescending'>SortTeamByLevelDescending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sortTeamByLevelDescending</span><span class="p">()</span>
+</code></pre>
+<p>Sorts the pokémon in the team by level in descending order, one pokémon at a time.</p>
+<h2 id='sortteamrangebylevelascending'>SortTeamRangeByLevelAscending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sortTeamRangeByLevelAscending</span><span class="p">(</span><span class="n">fromIndex</span><span class="p">,</span> <span class="n">toIndex</span><span class="p">)</span>  
+</code></pre>
+<p>Sorts the specified part of the team by level in ascending order, one pokémon at a time.</p>
+<h3 id='parameters-10'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>fromIndex</td>
+<td>number</td>
+<td>Lower index of the range (1-5).</td>
+</tr>
+<tr>
+<td>toIndex</td>
+<td>number</td>
+<td>Upper index of the range (2-6).</td>
+</tr>
+</tbody></table>
+<h2 id='sortteamrangebyleveldescending'>SortTeamRangeByLevelDescending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sortTeamRangeByLevelDescending</span><span class="p">(</span><span class="n">fromIndex</span><span class="p">,</span> <span class="n">toIndex</span><span class="p">)</span>
+</code></pre>
+<p>Sorts the specified part of the team by level in descending order, one pokémon at a time.</p>
+<h3 id='parameters-11'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>fromIndex</td>
+<td>number</td>
+<td>Lower index of the range (1-5).</td>
+</tr>
+<tr>
+<td>toIndex</td>
+<td>number</td>
+<td>Upper index of the range (2-6).</td>
+</tr>
+</tbody></table>
+<h2 id='buyitem'>BuyItem</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">buyItem</span><span class="p">(</span><span class="n">itemName</span><span class="p">,</span> <span class="n">quantity</span><span class="p">)</span>
+</code></pre>
+<p>Buys the specified item and quantity from the opened shop.</p>
+<h3 id='parameters-12'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>itemName</td>
+<td>string</td>
+<td>Name of the item you want to buy.</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>number</td>
+<td>Quantity you want to buy.</td>
+</tr>
+</tbody></table>
+<h2 id='closeshop'>CloseShop</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">closeShop</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if shop is closed.</p>
+<h2 id='giveitemtopokemon'>GiveItemToPokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">giveItemToPokemon</span><span class="p">(</span><span class="n">itemName</span><span class="p">,</span> <span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Give the specified item on the specified pokémon.</p>
+<h3 id='parameters-13'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>itemName</td>
+<td>string</td>
+<td>Name of the item you want to give.</td>
+</tr>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='removehelditemfrompokemon'>RemoveHeldItemFromPokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">removeHeldItemFromPokemon</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Take the held item from the specified pokémon. <strong>NOTE: The item will be lost forever.</strong></p>
+<h3 id='parameters-14'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+
+          <h1 id='battle-actions'>Battle Actions</h1><h2 id='attack'>Attack</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">attack</span><span class="p">()</span>
+</code></pre>
+<p>Uses the most effective offensive move available.</p>
+<h2 id='weakattack'>WeakAttack</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">weakAttack</span><span class="p">()</span>
+</code></pre>
+<p>Uses the least effective offensive move available.</p>
+<h2 id='run'>Run</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">run</span><span class="p">()</span>
+</code></pre>
+<p>Tries to escape from the current wild battle.</p>
+<h2 id='sendusablepokemon'>SendUsablePokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sendUsablePokemon</span><span class="p">()</span>
+</code></pre>
+<p>Sends the first usable pokémon different from the active one.  </p>
+<h2 id='sendanypokemon'>SendAnyPokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sendAnyPokemon</span><span class="p">()</span>
+</code></pre>
+<p>Sends the first available pokémon different from the active one.</p>
+<h2 id='sendpokemon'>SendPokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sendPokemon</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Sends the specified pokémon to battle.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='sendpokemondoublebattle'>SendPokemonDoubleBattle</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sendPokemonDoubleBattle</span><span class="p">(</span><span class="n">pokemonIndexCurrent</span><span class="p">,</span> <span class="n">pokemonIndexSending</span><span class="p">)</span>
+</code></pre>
+<p>Changes the specified pokémon with the specified pokémon during double/triple battle.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndexCurrent</td>
+<td>number</td>
+<td>Index of the pokémon currently in battle (1-6).</td>
+</tr>
+<tr>
+<td>pokemonIndexSending</td>
+<td>number</td>
+<td>Index of the pokémon you want to swap into battle (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='usemove'>UseMove</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">useMove</span><span class="p">(</span><span class="n">moveName</span><span class="p">)</span>
+</code></pre>
+<p>Uses the specified move in the current battle if available.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>moveName</td>
+<td>string</td>
+<td>Name of the move (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='useanymove'>UseAnyMove</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">useAnyMove</span><span class="p">()</span>
+</code></pre>
+<p>Uses the first available move or struggle if out of PP.</p>
+
+          <h1 id='pc-actions'>PC Actions</h1><h2 id='usepc'>UsePC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">usePC</span><span class="p">()</span>
+</code></pre>
+<p>Move to the PC and opens it, refreshing the first box.</p>
+<h2 id='openpcbox'>OpenPCBox</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">openPCBox</span><span class="p">(</span><span class="n">boxId</span><span class="p">)</span>
+</code></pre>
+<p>Open box from the PC.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+</tbody></table>
+<h2 id='depositpokemontopc'>DepositPokemonToPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">depositPokemonToPC</span><span class="p">(</span><span class="n">pokemonUid</span><span class="p">)</span>
+</code></pre>
+<p>Deposit a pokemon to the PC.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonUid</td>
+<td>number</td>
+<td>Unique ID of the specified Pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='withdrawpokemonfrompc'>WithdrawPokemonFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">withdrawPokemonFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">)</span>
+</code></pre>
+<p>Withdraw a pokemon from a known box.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>Unique ID of the specified pokemon.</td>
+</tr>
+</tbody></table>
+<h2 id='swappokemonfrompc'>SwapPokemonFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">swapPokemonFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">boxPokemonId</span><span class="p">,</span> <span class="n">pokemonUid</span><span class="p">)</span>
+</code></pre>
+<p>Swap a pokemon from the team with a pokemon from the PC.</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>boxPokemonId</td>
+<td>number</td>
+<td>Unique ID of the specified pokemon to deposit.</td>
+</tr>
+<tr>
+<td>pokemonUid</td>
+<td>number</td>
+<td>Unique ID of the specified Pokemon to withdraw.</td>
+</tr>
+</tbody></table>
+<h2 id='releasepokemonfromteam'>ReleasePokemonFromTeam</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">releasePokemonFromTeam</span><span class="p">(</span><span class="n">pokemonUid</span><span class="p">)</span>
+</code></pre>
+<p>Releases the specified pokemon in the team.</p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonUid</td>
+<td>number</td>
+<td>Unique ID of the specified Pokemon to release.</td>
+</tr>
+</tbody></table>
+<h2 id='releasepokemonfrompc'>ReleasePokemonFromPC</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">releasePokemonFromPC</span><span class="p">(</span><span class="n">boxId</span><span class="p">,</span> <span class="n">pokemonUid</span><span class="p">)</span>
+</code></pre>
+<p>Releases the specified pokemon in the PC.</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>boxId</td>
+<td>number</td>
+<td>ID of the specified box.</td>
+</tr>
+<tr>
+<td>pokemonUid</td>
+<td>number</td>
+<td>Unique ID of the specified Pokemon to release.</td>
+</tr>
+</tbody></table>
+
+          <h1 id='quest-actions'>Quest Actions</h1><h2 id='requestpathforquest'>RequestPathForQuest</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">requestPathForQuest</span><span class="p">(</span><span class="n">questName</span><span class="p">)</span>
+</code></pre>
+<p>Requests path for specified quest with name. It is something like &#39;goto&#39; button of PokeOne.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questName</td>
+<td>string</td>
+<td>Name of the quest.</td>
+</tr>
+</tbody></table>
+<h2 id='requestpathforquestid'>RequestPathForQuestId</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">requestPathForQuestId</span><span class="p">(</span><span class="n">questId</span><span class="p">)</span>
+</code></pre>
+<p>Requests path for specified quest with Id. It is something like &#39;goto&#39; button of PokeOne.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>questId</td>
+<td>string</td>
+<td>ID of the quest in Guid format.</td>
+</tr>
+</tbody></table>
+
+          <h1 id='other-actions'>Other Actions</h1><h2 id='useitem'>UseItem</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">useItem</span><span class="p">(</span><span class="n">itemName</span><span class="p">)</span>
+</code></pre>
+<p>Uses the specified item. This function is usable in the field and in battle.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>itemName</td>
+<td>string</td>
+<td>Name of the item you want to use.</td>
+</tr>
+</tbody></table>
+<h2 id='useitemonpokemon'>UseItemOnPokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">useItemOnPokemon</span><span class="p">(</span><span class="n">itemName</span><span class="p">,</span> <span class="n">pokemonIndex</span><span class="p">)</span>
+</code></pre>
+<p>Uses the specified item on the specified pokémon. This function is usable in the field and in battle.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>itemName</td>
+<td>string</td>
+<td>Name of the item you want to use.</td>
+</tr>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+</tbody></table>
+<h2 id='useitemonmove'>UseItemOnMove</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">useItemOnMove</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">string</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</code></pre>
+<p>Description</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>string</td>
+<td>Description.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>string</td>
+<td>Description.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>number</td>
+<td>Description.</td>
+</tr>
+</tbody></table>
+<h2 id='forgetmove'>ForgetMove</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">forgetMove</span><span class="p">(</span><span class="n">moveName</span><span class="p">)</span>
+</code></pre>
+<p>Only usable when learning a move, inside onMoveLearning. Forgets the specified move, if existing, in order to learn a new one.</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>moveName</td>
+<td>string</td>
+<td>Name of the move (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='forgetanymoveexcept'>ForgetAnyMoveExcept</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">forgetAnyMoveExcept</span><span class="p">(</span><span class="n">moveNames</span><span class="p">)</span>
+<span class="n">Example</span><span class="p">:</span> <span class="n">forgetAnyMoveExcept</span><span class="p">({</span><span class="s2">"Fly"</span><span class="p">,</span> <span class="s2">"Cut"</span><span class="p">,</span> <span class="s2">"Psychic"</span><span class="p">})</span>
+</code></pre>
+<p>Only usable when learning a move, inside onMoveLearning. Forgets the specified move, if existing, in order to learn a new one.</p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>moveNames</td>
+<td>array of string</td>
+<td>Name of the moves (case insensitive).</td>
+</tr>
+</tbody></table>
+<h2 id='pushdialoganswer'>PushDialogAnswer</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">pushDialogAnswer</span><span class="p">(</span><span class="n">answerIndex</span><span class="p">)</span>
+</code></pre>
+<p>Adds the specified answer to the answer queue. It will be used in the next dialog. This function should be called before a talkToNpc or talkToNpcOnCell.</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>answerIndex</td>
+<td>number</td>
+<td>Index of the answer or index of the pokémon to select.</td>
+</tr>
+</tbody></table>
+<h2 id='logtofile'>LogToFile</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">logToFile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="p">[</span><span class="n">overwrite</span><span class="p">])</span>
+</code></pre>
+<p>Writes a string, a number, or a table of strings and/or numbers to file. overwrite is an optional parameter, and will append the line(s) if absent. Files must be located in /Logs.</p>
+<h3 id='parameters-7'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>file</td>
+<td>string</td>
+<td>Name of the log file.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>string</td>
+<td>Text to log to the specified file.</td>
+</tr>
+<tr>
+<td>overwrite</td>
+<td>bool</td>
+<td>Append absent lines to file (true/false).</td>
+</tr>
+</tbody></table>
+<h2 id='readlinesfromfile'>ReadLinesFromFile</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">readLinesFromFile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</code></pre>
+<p>Returns a table of every line in file. Files must be located in /Logs.</p>
+<h3 id='parameters-8'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>file</td>
+<td>string</td>
+<td>Name of the log file.</td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="lua">lua</a>
           </div>
       </div>
     </div>
