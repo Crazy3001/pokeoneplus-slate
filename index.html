@@ -1344,6 +1344,67 @@
 <td>Name of the stat (case insensitive).</td>
 </tr>
 </tbody></table>
+<h2 id='getpokemoncollectedefforvalue'>GetPokemonCollectedEfforValue</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getPokemonCollectedEfforValue</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">statName</span><span class="p">)</span>
+</code></pre>
+<p>Returns the collected effort value for the specified stat of the specified pokémon in the team. Stat names are:</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-31'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>statName</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+</tbody></table>
 
           <h1 id='battle-conditions'>Battle Conditions</h1><h2 id='isopponentshiny'>IsOpponentShiny</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isOpponentShiny</span><span class="p">()</span>
 </code></pre>
@@ -3261,10 +3322,76 @@
 <td>Description.</td>
 </tr>
 </tbody></table>
+<h2 id='setcollectedefforvalue'>SetCollectedEfforValue</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">setCollectedEfforValue</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">,</span> <span class="n">statName</span><span class="p">,</span> <span class="n">evAmount</span><span class="p">)</span>
+</code></pre>
+<p>Sets specific amount of collected evs to the specified Pokemon. Stat names are:</p>
+
+<table><thead>
+<tr>
+<th>Full Name</th>
+<th>Short</th>
+<th>Alternative</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Health</td>
+<td>HP</td>
+<td></td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>ATK</td>
+<td></td>
+</tr>
+<tr>
+<td>Defence</td>
+<td>DEF</td>
+<td>Defense</td>
+</tr>
+<tr>
+<td>SpAttack</td>
+<td>SPATK</td>
+<td></td>
+</tr>
+<tr>
+<td>SpDefence</td>
+<td>SPDEF</td>
+<td>SpDefense</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>SPD</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pokemonIndex</td>
+<td>number</td>
+<td>Index of the pokémon (1-6).</td>
+</tr>
+<tr>
+<td>statName</td>
+<td>string</td>
+<td>Name of the stat (case insensitive).</td>
+</tr>
+<tr>
+<td>evAmount</td>
+<td>number</td>
+<td>What to set the EV amount to.</td>
+</tr>
+</tbody></table>
 <h2 id='forgetmove'>ForgetMove</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">forgetMove</span><span class="p">(</span><span class="n">moveName</span><span class="p">)</span>
 </code></pre>
 <p>Only usable when learning a move, inside onMoveLearning. Forgets the specified move, if existing, in order to learn a new one.</p>
-<h3 id='parameters-4'>Parameters</h3>
+<h3 id='parameters-5'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3282,7 +3409,7 @@
 <span class="n">Example</span><span class="p">:</span> <span class="n">forgetAnyMoveExcept</span><span class="p">({</span><span class="s2">"Fly"</span><span class="p">,</span> <span class="s2">"Cut"</span><span class="p">,</span> <span class="s2">"Psychic"</span><span class="p">})</span>
 </code></pre>
 <p>Only usable when learning a move, inside onMoveLearning. Forgets the specified move, if existing, in order to learn a new one.</p>
-<h3 id='parameters-5'>Parameters</h3>
+<h3 id='parameters-6'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3299,7 +3426,7 @@
 <h2 id='pushdialoganswer'>PushDialogAnswer</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">pushDialogAnswer</span><span class="p">(</span><span class="n">answerIndex</span><span class="p">)</span>
 </code></pre>
 <p>Adds the specified answer to the answer queue. It will be used in the next dialog. This function should be called before a talkToNpc or talkToNpcOnCell.</p>
-<h3 id='parameters-6'>Parameters</h3>
+<h3 id='parameters-7'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3316,7 +3443,7 @@
 <h2 id='logtofile'>LogToFile</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">logToFile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="p">[</span><span class="n">overwrite</span><span class="p">])</span>
 </code></pre>
 <p>Writes a string, a number, or a table of strings and/or numbers to file. overwrite is an optional parameter, and will append the line(s) if absent. Files must be located in /Logs.</p>
-<h3 id='parameters-7'>Parameters</h3>
+<h3 id='parameters-8'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3343,7 +3470,7 @@
 <h2 id='readlinesfromfile'>ReadLinesFromFile</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">readLinesFromFile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </code></pre>
 <p>Returns a table of every line in file. Files must be located in /Logs.</p>
-<h3 id='parameters-8'>Parameters</h3>
+<h3 id='parameters-9'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
