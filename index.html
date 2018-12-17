@@ -389,6 +389,9 @@
 <h2 id='gettotalsteps'>GetTotalSteps</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getTotalSteps</span><span class="p">()</span>
 </code></pre>
 <p>Returns total steps taken by the account.</p>
+<h2 id='getlastdirection'>GetLastDirection</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getLastDirection</span><span class="p">()</span>
+</code></pre>
+<p>Returns last direction of the player.</p>
 <h2 id='hasitem'>HasItem</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">hasItem</span><span class="p">(</span><span class="n">itemName</span><span class="p">)</span>
 </code></pre>
 <p>Returns true if the specified item is in the inventory.</p>
@@ -596,6 +599,12 @@
 <h2 id='isoutside'>IsOutside</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isOutside</span><span class="p">()</span>
 </code></pre>
 <p>Returns true if the character is outside.</p>
+<h2 id='isplayerfacingwater'>IsPlayerFacingWater</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isPlayerFacingWater</span><span class="p">()</span>
+</code></pre>
+<p>Returns true if the character is facing water.</p>
+<h2 id='getwaterdirectionfromplayer'>GetWaterDirectionFromPlayer</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getWaterDirectionFromPlayer</span><span class="p">()</span>
+</code></pre>
+<p>Returns water direction from the player.</p>
 <h2 id='istrainerinforeceived'>IsTrainerInfoReceived</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">isTrainerInfoReceived</span><span class="p">()</span>
 </code></pre>
 <p>Returns true if trainer info has been received.</p>
@@ -645,6 +654,80 @@
 <h2 id='countbadges'>CountBadges</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">countBadges</span><span class="p">()</span>
 </code></pre>
 <p>Counts players currently owned badges.</p>
+<h2 id='countnpcwith'>CountNpcWith</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">countNpcWith</span><span class="p">(</span><span class="n">npcNameContains</span><span class="p">)</span>
+</code></pre>
+<p>Counts total NPCs with specified string.</p>
+<h3 id='parameters-14'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>npcNameContains</td>
+<td>string</td>
+<td>Containing string of the NPC name.</td>
+</tr>
+</tbody></table>
+<h2 id='checknpcwith'>CheckNpcWith</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">checkNpcWith</span><span class="p">(</span><span class="n">npcNameContains</span><span class="p">)</span>
+</code></pre>
+<p>Checks if any NPCs is visible with specified string.</p>
+<h3 id='parameters-15'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>npcNameContains</td>
+<td>string</td>
+<td>Containing string of the NPC name.</td>
+</tr>
+</tbody></table>
+<h2 id='getallnpcdata'>GetAllNpcData</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getAllNpcData</span><span class="p">()</span>
+</code></pre>
+<p>Returns npc data on current map, format : { { &quot;x&quot; = x , &quot;y&quot; = y, &quot;los&quot; = los, &quot;isBattler&quot; = isBattler }, {...}, ... }
+The data you can retrieve is: x, y, name, isBattler, canBattle, id, los</p>
+<h2 id='getnpcdata'>GetNpcData</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getNpcData</span><span class="p">(</span><span class="n">npcName</span><span class="p">)</span>
+</code></pre>
+<p>Returns npc data with spcified name on current map, format : { { &quot;x&quot; = x , &quot;y&quot; = y, &quot;los&quot; = los, &quot;isBattler&quot; = isBattler }, {...}, ... }
+The data you can retrieve is: x, y, name, isBattler, canBattle, id, los</p>
+<h3 id='parameters-16'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>npcName</td>
+<td>string</td>
+<td>Name of the NPC.</td>
+</tr>
+</tbody></table>
+<h2 id='getnpcdatawith'>GetNpcDataWith</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">getNpcDataWith</span><span class="p">(</span><span class="n">npcNameContains</span><span class="p">)</span>
+</code></pre>
+<p>Returns npc data with spcified string, format : { { &quot;x&quot; = x , &quot;y&quot; = y, &quot;los&quot; = los, &quot;isBattler&quot; = isBattler }, {...}, ... }
+The data you can retrieve is: x, y, name, isBattler, canBattle, id, los</p>
+<h3 id='parameters-17'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>npcNameContains</td>
+<td>string</td>
+<td>Containing string of the NPC name.</td>
+</tr>
+</tbody></table>
 <h2 id='useequippedmount'>UseEquippedMount</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">useEquippedMount</span><span class="p">()</span>
 </code></pre>
 <p>Uses the currently equipped mount.</p>
@@ -2838,6 +2921,9 @@
 <h2 id='movetowater'>MoveToWater</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveToWater</span><span class="p">()</span>
 </code></pre>
 <p>Moves to the nearest water area then moves randomly inside it.</p>
+<h2 id='movetoencounterwild'>MoveToEncounterWild</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">moveToEncounterWild</span><span class="p">()</span>
+</code></pre>
+<p>Moves to wild encounter cells randomly.</p>
 <h2 id='useequippedmount'>UseEquippedMount</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">useEquippedMount</span><span class="p">()</span>
 </code></pre>
 <p>Uses the currently equipped mount.</p>
@@ -2858,10 +2944,27 @@
 <td>Name of the NPC (case insensitive).</td>
 </tr>
 </tbody></table>
+<h2 id='talknpcwith'>TalkNpcWith</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">talkNpcWith</span><span class="p">(</span><span class="n">npcNameContains</span><span class="p">)</span>
+</code></pre>
+<p>Moves then talk to NPC which name contains specified string.  If more than 1 NPC is found, the bot will talk to the nearest NPC from the player.</p>
+<h3 id='parameters-8'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>npcNameContains</td>
+<td>string</td>
+<td>Containing string of the NPC name.</td>
+</tr>
+</tbody></table>
 <h2 id='talktonpconcell'>TalkToNpcOnCell</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">talkToNpcOnCell</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
 </code></pre>
 <p>Moves then talks to NPC located on the specified cell.</p>
-<h3 id='parameters-8'>Parameters</h3>
+<h3 id='parameters-9'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2880,13 +2983,34 @@
 <td>Y coordinate of the cell.</td>
 </tr>
 </tbody></table>
+<h2 id='turncharacter'>TurnCharacter</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">turnCharacter</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+</code></pre>
+<p>Turns the character to specified direction.
+For Up, use one of these for &#39;direction&#39;: Up, u, n, 1
+For Down, use one of these for &#39;direction&#39;: Down, d, s, 2
+For Left, use one of these for &#39;direction&#39;: Left, l, w, 3
+For Right, use one of these for &#39;direction&#39;: Right, r, e, 4</p>
+<h3 id='parameters-10'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>direction</td>
+<td>string</td>
+<td>Direction you want the player to face.</td>
+</tr>
+</tbody></table>
 <h2 id='usepokecenter'>UsePokecenter</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">usePokecenter</span><span class="p">()</span>
 </code></pre>
 <p>Moves to the Nurse Joy then talks to the cell below her.</p>
 <h2 id='swappokemon'>SwapPokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">swapPokemon</span><span class="p">(</span><span class="n">pokemonIndex1</span><span class="p">,</span> <span class="n">pokemonIndex2</span><span class="p">)</span>
 </code></pre>
 <p>Swaps the two pokémon specified by their position in the team.</p>
-<h3 id='parameters-9'>Parameters</h3>
+<h3 id='parameters-11'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2914,7 +3038,7 @@
 <h2 id='sortteamrangebylevelascending'>SortTeamRangeByLevelAscending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sortTeamRangeByLevelAscending</span><span class="p">(</span><span class="n">fromIndex</span><span class="p">,</span> <span class="n">toIndex</span><span class="p">)</span>  
 </code></pre>
 <p>Sorts the specified part of the team by level in ascending order, one pokémon at a time.</p>
-<h3 id='parameters-10'>Parameters</h3>
+<h3 id='parameters-12'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2936,7 +3060,7 @@
 <h2 id='sortteamrangebyleveldescending'>SortTeamRangeByLevelDescending</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">sortTeamRangeByLevelDescending</span><span class="p">(</span><span class="n">fromIndex</span><span class="p">,</span> <span class="n">toIndex</span><span class="p">)</span>
 </code></pre>
 <p>Sorts the specified part of the team by level in descending order, one pokémon at a time.</p>
-<h3 id='parameters-11'>Parameters</h3>
+<h3 id='parameters-13'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2958,7 +3082,7 @@
 <h2 id='buyitem'>BuyItem</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">buyItem</span><span class="p">(</span><span class="n">itemName</span><span class="p">,</span> <span class="n">quantity</span><span class="p">)</span>
 </code></pre>
 <p>Buys the specified item and quantity from the opened shop.</p>
-<h3 id='parameters-12'>Parameters</h3>
+<h3 id='parameters-14'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2983,7 +3107,7 @@
 <h2 id='giveitemtopokemon'>GiveItemToPokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">giveItemToPokemon</span><span class="p">(</span><span class="n">itemName</span><span class="p">,</span> <span class="n">pokemonIndex</span><span class="p">)</span>
 </code></pre>
 <p>Give the specified item on the specified pokémon.</p>
-<h3 id='parameters-13'>Parameters</h3>
+<h3 id='parameters-15'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3005,7 +3129,7 @@
 <h2 id='removehelditemfrompokemon'>RemoveHeldItemFromPokemon</h2><pre class="highlight lua tab-lua"><code><span class="k">function</span> <span class="nf">removeHeldItemFromPokemon</span><span class="p">(</span><span class="n">pokemonIndex</span><span class="p">)</span>
 </code></pre>
 <p>Take the held item from the specified pokémon. <strong>NOTE: The item will be lost forever.</strong></p>
-<h3 id='parameters-14'>Parameters</h3>
+<h3 id='parameters-16'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
